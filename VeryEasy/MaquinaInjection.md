@@ -62,6 +62,8 @@ Podríamos intentar acceder a esta máquina mediante SSH, utilizando el usuario 
 
 Vemos que logramos ingresar con éxito.
 
+## Escalada de Privilegios
+
 Ahora, el siguiente paso es buscar la manera de escalar privilegios. Ejecutamos sudo -l para revisar los permisos del usuario.
 
 ![hola](ImagenesMaquinaInjection/Pasted%20image%2020240813142515.png)
