@@ -1,6 +1,6 @@
 # Maquina FirstHacking - DockerLabs.es
 
-![alt text](image.png)
+![alt text](ImagenesMaquinaFirstHacking/image.png)
 
 Primero, debemos verificar que nuestra máquina esté correctamente desplegada.
 
