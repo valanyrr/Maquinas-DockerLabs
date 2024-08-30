@@ -148,7 +148,7 @@ Primero, nos podremos a la escucha en nuestra maquina atacante utilizando netcat
 
 <!-- ![[Pasted image 20240830163913.png]] -->
 
-![alt text](ImagenesMaquinaCandy/Pasted%20image%2020240830163913.png)
+![alt text](ImagenesMaquinaCandy/image1.png)
 
 Luego, crearemos una reverse shell y la convertiremos a Base64 usando el siguiente comando:
 
