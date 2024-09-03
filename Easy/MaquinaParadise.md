@@ -24,23 +24,21 @@ Y vemos lo siguiente...
 
 ![alt text](ImagenesMaquinaParadise/image-5.png)
 
-Si damos click al boton que dice "Go to the Paradise" nos llevara a una parte de la web que tiene una galeria de imagenes.
+Al hacer clic en el botón que dice "Go to the Paradise", serás dirigido a una sección de la web que contiene una galería de imágenes.
 
 ![alt text](ImagenesMaquinaParadise/image-6.png)
 
-Y si vemos el código fuente de dicha página notaremos que hay un Base64
+Y si revisamos el código fuente de esa página, notaremos que contiene una codificación en Base64.
 
 ![alt text](ImagenesMaquinaParadise/image-7.png)
 
-El cual si lo decodificamos veremos lo siguiente
+El cual, al ser decodificado, revela lo siguiente:
 
 ![alt text](ImagenesMaquinaParadise/image-8.png)
 
-Ahora bien, hay mas opciones en la página que visitar, incluso podemos hacer fuzzing y encontrar algunas otras cosas como "login.php" entre otros... Pero ya te digo que por ahi no van los tiros.
+Ahora bien, hay más opciones que explorar en la página; incluso podríamos realizar un fuzzing para descubrir otros elementos, como "login.php", entre otros. Sin embargo, te advierto que esas vías no parecen ser las más prometedoras.
 
-Ahora como vimos anteriormente el base64 dice lo siguiente `estoesunsecreto`, si visitamos esto dentro de la pagina web veremos lo siguiente.
-
-Al parecer vemos un fichero de text el cual dice `mensaje_para_lucas.txt`, que basicamente es un mensaje dirigido para alguien llamado `lucas`, lo cual ya me da un usuario potencial con el cual podemos intentar hacer cosillas...
+Como vimos anteriormente, la cadena en Base64 decodifica a `estoesunsecreto`. Si ingresamos esto en la página web, encontraremos un archivo de texto llamado `mensaje_para_lucas.txt`. Este archivo contiene un mensaje dirigido a alguien llamado `lucas`, lo cual nos proporciona un posible usuario con el que podríamos intentar interactuar o explorar más a fondo.
 
 ![alt text](ImagenesMaquinaParadise/image-9.png)
 
@@ -56,7 +54,7 @@ Intentaremos hacer un ataque de fuerza bruta con Hydra utilizando como usuario a
 
 ![alt text](ImagenesMaquinaParadise/image-11.png)
 
-Vemos que pudimos encontrar una contraseña para dicho usuario, ahora nos conectaremos por SSH utilizando estas credenciales..
+Hemos encontrado una contraseña para el usuario en cuestión. Ahora procederemos a conectarnos a través de SSH utilizando estas credenciales.
 
 ![alt text](ImagenesMaquinaParadise/image-12.png)
 
@@ -64,10 +62,10 @@ Vemos que ya estamos dentro..
 
 ## Escalada de Privilegios
 
-Si hacemos una busqueda de binarios SUID SGID notaremos que hay algunos que son muy curiosos en los cuales tenemos permisos de ejecucion...
+Si realizamos una búsqueda de binarios con permisos SUID y SGID, encontraremos algunos que son especialmente interesantes y en los que tenemos permisos de ejecución.
 
 ![alt text](ImagenesMaquinaParadise/image-17.png)
 
-Si ejecutamos el binario `/usr/local/bin/privileged_exec` por curiosidad veremos que seremos root.
+Si ejecutamos el binario /usr/local/bin/privileged_exec por curiosidad, descubriremos que obtenemos privilegios de root.
 
 ![alt text](ImagenesMaquinaParadise/image-18.png)
