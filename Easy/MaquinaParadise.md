@@ -1,4 +1,4 @@
-# Maquina Amor - DockerLabs.es
+# Maquina Paradise - DockerLabs.es
 
 ![alt text](ImagenesMaquinaParadise/image.png)
 
