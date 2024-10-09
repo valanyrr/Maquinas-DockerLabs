@@ -18,7 +18,7 @@ Observamos que el puerto 80 y 22 estan abiertos. Ahora realizamos un escaneo adi
 
 ![alt text](ImagenesMaquinaEscolares/image-6.png)
 
-En este caso, nos centraremos en el puerto 80 el unico que esta abierto y ejecuta un Apache. Accederemos a la página web alojada en esta máquina utilizando un navegador y veremos lo siguiente.
+En este caso, nos centraremos en el puerto 80 que ejecuta un Apache. Accederemos a la página web alojada en esta máquina utilizando un navegador y veremos lo siguiente.
 
 ![alt text](ImagenesMaquinaEscolares/image-7.png)
 
